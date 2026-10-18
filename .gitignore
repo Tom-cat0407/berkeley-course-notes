@@ -1,0 +1,75 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# 编辑器 / IDE
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Java
+*.class
+target/
+.gradle/
+hs_err_pid*
+replay_pid*
+
+# C / C++
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+a.out
+*.dSYM/
+core.[0-9]*
+
+# JavaScript / Node.js
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+coverage/
+*.tsbuildinfo
+*.log
+
+# 本地环境与密钥：保留示例文件
+.env
+.env.*
+!.env.example
+
+# 临时文件
+tmp/
+temp/
+
+# 注意：不要忽略课程资源目录（如 assets/、resources/、examples/、practice/），
+# 也不要忽略 PDF、图片、数据文件等常见资料类型。
