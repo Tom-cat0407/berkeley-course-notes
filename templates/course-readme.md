@@ -56,9 +56,10 @@ courses/{{COURSE_CODE}}/
 ├── lectures/
 │   └── {{NN}}-{{TOPIC_SLUG}}/
 │       ├── README.md
-│       ├── examples/
-│       ├── practice/
-│       └── assets/
+│       ├── notes/              # 长课的分主题笔记，按需
+│       ├── examples/           # 完整代码或伪代码，按需
+│       ├── practice/           # exercises.md 与 solutions.md，按需
+│       └── assets/             # 有素材时创建
 └── labs/ homework/ projects/   # 课程层，按需创建
 ```
 
