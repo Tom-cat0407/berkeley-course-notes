@@ -73,3 +73,6 @@ temp/
 
 # 注意：不要忽略课程资源目录（如 assets/、resources/、examples/、practice/），
 # 也不要忽略 PDF、图片、数据文件等常见资料类型。
+
+# 本地写作规范：仅保留在本地，不上传
+/docs/writing-guide.md

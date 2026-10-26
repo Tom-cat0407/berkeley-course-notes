@@ -40,7 +40,7 @@
 3. 进入 `courses/<course-code>/`，先读课程 README，按其中的导航开始学习。
 4. 课次笔记在开始写作后按 `lectures/NN-topic/` 建立；当前课程的入口与下一步见其 README。
 
-新增课程或课次前，先读[写作规范](docs/writing-guide.md)，再从[课程模板](templates/course-readme.md) / [课次模板](templates/lesson-readme.md) 复制并替换占位符；复制命令见课程索引。
+新增课程或课次前，从[课程模板](templates/course-readme.md) / [课次模板](templates/lesson-readme.md) 复制并替换占位符；复制命令见课程索引。
 
 ## 目录结构
 
@@ -49,8 +49,7 @@ berkeley-course-notes/
 ├── README.md
 ├── .gitignore
 ├── docs/
-│   ├── preface.md
-│   └── writing-guide.md
+│   └── preface.md
 ├── templates/
 │   ├── course-readme.md
 │   └── lesson-readme.md
