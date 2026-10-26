@@ -9,7 +9,6 @@
 [CS294-196 / CS194-196 · Agentic AI](courses/cs294-196/README.md) · Fall 2025
 
 - [课程入口与模块进度](courses/cs294-196/README.md)
-- [第 1 课：Agentic AI 基础](courses/cs294-196/lectures/01-agentic-ai-fundamentals/README.md)
 - [15 Module 大纲](courses/cs294-196/syllabus.md)
 - [10 阶段学习路线](courses/cs294-196/roadmap.md)
 - [资源索引](courses/cs294-196/resources.md)
@@ -33,7 +32,7 @@
 
 2. 打开[课程索引](courses/README.md)，选择要学习的课程。
 3. 进入 `courses/<course-code>/`，先读课程 README，按其中的导航开始学习。
-4. 课次笔记按 `lectures/NN-topic/` 组织；当前课程的入口、课次与下一步见其 README。
+4. 课次笔记在开始写作后按 `lectures/NN-topic/` 建立；当前课程的入口与下一步见其 README。
 
 新增课程或课次前，先读[写作规范](docs/writing-guide.md)，再从[课程模板](templates/course-readme.md) / [课次模板](templates/lesson-readme.md) 复制并替换占位符；复制命令见课程索引。
 
@@ -55,12 +54,7 @@ berkeley-course-notes/
         ├── syllabus.md
         ├── roadmap.md
         ├── resources.md
-        └── lectures/
-            └── 01-agentic-ai-fundamentals/
-                ├── README.md
-                ├── notes/
-                ├── examples/
-                └── practice/
+        └── lectures/              # 后续按需创建
 ```
 
-课程内容按 `courses/<course-code>/` 隔离：路径和标识符优先使用英文，目录名以小写短横线为主，说明文字使用中文。每节的笔记、示例、练习和素材放在该节课次目录；实验、作业和项目放在课程层。资源链接集中记录在课程的 `resources.md`。
+课程内容按 `courses/<course-code>/` 隔离：路径和标识符优先使用英文，目录名以小写短横线为主，说明文字使用中文。每节的示例、练习和素材放在该节课次目录；实验、作业和项目放在课程层。资源链接集中记录在课程的 `resources.md`。

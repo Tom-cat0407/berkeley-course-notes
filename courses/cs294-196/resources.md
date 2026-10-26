@@ -25,7 +25,5 @@
 ## 本仓库工程补充
 
 - [WebArena](https://github.com/web-arena-x/webarena)、[BrowserGym](https://github.com/ServiceNow/BrowserGym)、[OSWorld](https://github.com/xlang-ai/OSWorld)：M11 的工程参考，不归入 2025 官方阅读。
-- [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)（Anthropic，2024-12-19）：工程补充，不是 Berkeley 官方必读。用预定义代码路径与模型动态决定控制流来区分 workflow 和 agent，并强调环境反馈与停止条件。
-- [MCP architecture](https://modelcontextprotocol.io/docs/learn/architecture)：MCP 官方架构说明，补充 host/client/server 与上下文交换。仅作协议补充，不归入课程官方阅读。
 - M15 的候选技术栈、交付项与官方项目区别见 [syllabus M15](syllabus.md#m15)。
-- 当前课次包含概念笔记、伪代码与教学轨迹，暂无可运行代码或安装配置；首次编写带运行的课次时，在课程 README 记录实际环境、安装命令和验证方式。
+- 当前没有代码或安装配置；第一次编写带运行的课次时，在课程 README 记录实际环境、安装命令和验证方式。

@@ -1,38 +1,25 @@
 <!--
 模板使用说明（复制到课次目录后删除本段）：
 
-在仓库根目录执行：
+在仓库根目录执行，变量值需替换为真实课程与课次信息：
 course_code='替换为课程代码'
 lesson_slug='01-topic'
 mkdir -p "courses/$course_code/lectures/$lesson_slug"
 cp templates/lesson-readme.md "courses/$course_code/lectures/$lesson_slug/README.md"
 
-先选定一种组织方式，再删除未用部分：
-- 短课：只保留本 README，删除“阅读顺序”整节，把正文写入“核心讲解（短课使用）”。
-- 长课：README 只保留目标、前置、阅读顺序、练习、回顾和参考入口，删除“核心讲解（短课使用）”；
-  正文按主题放入 `notes/`，每篇笔记自行加回课次入口和前后篇导航。
-
-可选段落标有“（可选）”；没有对应内容时整段删除。
-`{{MODULE}}` 仅用于按 Module 组织的课程；未采用 Module 时删除对应行。
-替换全部 `{{...}}` 占位符；模板中的路径只放在行内代码或代码块中，
-实例化后再改成相对链接，避免复制前出现坏链接。
+将全部 `{{...}}` 替换为真实内容；没有运行示例时可删除“运行方式与预期结果”。
+模板中的路径和 URL 只放在代码块或行内代码中，实例化后再改成相对链接，
+以免复制前产生坏链接。
 
 常用变量：
-`{{COURSE_CODE}}` | `{{NN}}` | `{{TOPIC_SLUG}}` | `{{TOPIC_TITLE}}`
-`{{MODULE}}` | `{{SOURCE_MATERIAL}}` | `{{OBJECTIVE_N}}`
-`{{NOTE_FILE}}` | `{{EXAMPLE_FILE}}` | `{{EXERCISE_FILE}}` | `{{SOLUTION_FILE}}`
-`{{REFERENCE_TITLE}}` | `{{REFERENCE_URL}}` | `{{ACCESS_DATE}}`
+`{{COURSE_CODE}}` 课程代码 | `{{NN}}` 课次序号 | `{{TOPIC_SLUG}}` 课次英文短名
+`{{TOPIC_TITLE}}` 课次标题 | `{{SOURCE_MATERIAL}}` 对应课件/教材位置
+`{{INSTALL_COMMAND}}` 安装命令 | `{{RUN_COMMAND}}` 运行命令
 -->
 
 # {{NN}} · {{TOPIC_TITLE}}
 
-> 所属课程：`{{COURSE_CODE}}`（个人自学课次）
->
-> 所属 Module：`{{MODULE}}`（可选）
->
-> 官方关联：`{{SOURCE_MATERIAL}}`
-
-用一两句话说明本课要解决的问题，以及这是个人整理而非官方讲义。
+> 所属课程：`{{COURSE_CODE}}` · 对应材料：`{{SOURCE_MATERIAL}}`
 
 ## 学习目标
 
@@ -42,19 +29,14 @@ cp templates/lesson-readme.md "courses/$course_code/lectures/$lesson_slug/README
 - {{OBJECTIVE_2}}
 - {{OBJECTIVE_3}}
 
-## 前置知识（可选）
+## 前置知识
 
 - {{PREREQUISITE_1}}
+- {{PREREQUISITE_2}}
 
-## 阅读顺序（长课使用）
+如果前置内容记不清，先回到对应课次：`../{{PREV_NN}}-{{PREV_TOPIC_SLUG}}/README.md`。
 
-1. `notes/{{NOTE_FILE}}`：{{NOTE_PURPOSE}}
-2. `examples/{{EXAMPLE_FILE}}`：{{EXAMPLE_PURPOSE}}
-3. `practice/{{EXERCISE_FILE}}`：题目与完成标准。
-
-长课时这里只列入口；短课删除本节。
-
-## 核心讲解（短课使用）
+## 核心讲解
 
 ### {{CONCEPT_1}}
 
@@ -64,20 +46,28 @@ cp templates/lesson-readme.md "courses/$course_code/lectures/$lesson_slug/README
 
 {{EXPLANATION_2}}
 
-长课删除本节，正文写入 `notes/`；每篇笔记加回课次入口和前后篇导航。
+写清楚“是什么、为什么这样设计、什么时候适用”，不要只罗列定义。
 
-## 示例 / 推导（可选）
+## 示例 / 推导
+
+### 示例 1：{{EXAMPLE_TITLE}}
 
 - 问题：{{PROBLEM}}
 - 思路：{{APPROACH}}
 - 关键步骤：{{STEPS}}
 - 结论：{{CONCLUSION}}
 
-完整代码或伪代码放 `examples/`，正文只保留必要短片段。伪代码要标注未实现、不可运行。
+```text
+{{CODE_OR_DERIVATION}}
+```
 
-## 运行方式与预期结果（可选）
+### 示例 2（可选）：{{EXAMPLE_TITLE_2}}
 
-有可运行代码时填写；没有时整段删除。
+{{EXAMPLE_2}}
+
+## 运行方式与预期结果
+
+适用于有可运行代码或实验的课次；没有时删除本节，或写“本课次无运行示例”。
 
 - 工作目录：`courses/{{COURSE_CODE}}/lectures/{{NN}}-{{TOPIC_SLUG}}`
 - 依赖安装：`{{INSTALL_COMMAND}}`
@@ -89,25 +79,30 @@ cp templates/lesson-readme.md "courses/$course_code/lectures/$lesson_slug/README
 {{EXPECTED_OUTPUT}}
 ```
 
-结果必须是实际输出；未运行时明确标注。
+记录实际使用的版本和平台；预期结果应与真实运行一致，未验证时明确标注。
 
-## 易错点（可选）
+## 易错点
 
 - {{PITFALL_1}}：{{WHY_AND_FIX_1}}
+- {{PITFALL_2}}：{{WHY_AND_FIX_2}}
 
 ## 练习
 
-- 题目与完成标准：`practice/{{EXERCISE_FILE}}`
-- 参考答案：`practice/{{SOLUTION_FILE}}`
+1. {{EXERCISE_1}}
+2. {{EXERCISE_2}}
+
+练习文件放在本课次目录的 `practice/`；参考答案或提示说明位置，例如：`practice/{{EXERCISE_FILE}}`。
 
 ## 回顾
 
-- [ ] {{REVIEW_QUESTION_1}}
-- [ ] {{REVIEW_QUESTION_2}}
+- [ ] 能用自己的话解释：{{REVIEW_QUESTION_1}}
+- [ ] 能独立完成：{{REVIEW_QUESTION_2}}
+- [ ] 仍不清楚、需要回看：{{REVIEW_QUESTION_3}}
 
 ## 参考
 
-- {{REFERENCE_TITLE}}：`{{REFERENCE_URL}}`
-- 访问日期：`{{ACCESS_DATE}}`
+- {{REFERENCE_1_TITLE}}：`{{REFERENCE_1_URL}}`
+- {{REFERENCE_2_TITLE}}：`{{REFERENCE_2_URL}}`
+- 对应课件/教材位置：`{{SOURCE_LOCATION}}`
 
-官方材料与个人理解分开标注。
+官方材料与个人理解分开标注；引用外部内容时标明来源和访问日期。

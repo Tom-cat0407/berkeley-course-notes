@@ -18,18 +18,13 @@ courses/cs294-196/
 ├── syllabus.md            # 自学 Module 的目标、知识点、产物与来源
 ├── roadmap.md             # 学习路线、应用分支与高级扩展
 ├── resources.md           # 官方 2025、2024 补充与本仓库工程资源
-└── lectures/              # 课次按需增加
+└── lectures/              # 后续按需创建
     └── NN-topic/
-        ├── README.md      # 短入口；短课也可只保留这一页
-        ├── notes/         # 分主题笔记，按需
-        ├── examples/      # 完整代码、伪代码与说明，按需
-        ├── practice/
-        │   ├── exercises.md   # 题目与完成标准
-        │   └── solutions.md   # 独立参考答案
-        └── assets/        # 图片、数据等素材，有需要才创建
+        ├── README.md      # 单次课笔记，记录所属 Module 与官方来源
+        ├── examples/      # 可运行示例或推导材料，按需
+        ├── practice/      # 练习、提示与解答，按需
+        └── assets/        # 图片、数据等本地素材，按需
 ```
-
-短课可以只有 `README.md`；长课才按主题拆到 `notes/`。目录和文件随内容需要创建，不要求所有课次套用同一组文件。
 
 `labs/`、`homework/`、`projects/` 位于课程目录，仅在有真实内容时创建。
 
@@ -47,7 +42,7 @@ courses/cs294-196/
 
 4. 填写课程 README 中的学期版本、官方链接、先修知识和环境与依赖，删除模板说明与不适用的占位内容。
 5. 采用 Module 结构时，把模块大纲写入 `syllabus.md`，把学习顺序写入 `roadmap.md`；课程 README 保留课程信息、导航和统一的学习进度。
-6. 课次按 `lectures/NN-topic/README.md` 组织，`NN` 从 `01` 开始补零，`topic` 使用英文小写短横线。课次 README 记录所属 Module（如适用）与官方来源。课次内容从[课次模板](../templates/lesson-readme.md)创建，以下命令在仓库根目录执行：
+6. 课次按 `lectures/NN-topic/README.md` 组织，`NN` 从 `01` 开始补零，`topic` 使用英文小写短横线。课次 README 记录所属 Module 与官方来源。课次内容从[课次模板](../templates/lesson-readme.md)创建，以下命令在仓库根目录执行：
 
    ```bash
    course_code='替换为课程代码'
@@ -56,7 +51,7 @@ courses/cs294-196/
    cp templates/lesson-readme.md "courses/$course_code/lectures/$lesson_slug/README.md"
    ```
 
-7. `notes/`、`examples/`、`practice/`、`assets/` 放在对应课次目录，与课次 README 并列，按需创建；练习题目与答案分文件，`labs/`、`homework/`、`projects/` 位于课程目录，按需创建。目录在实际开始写作时建立，不用空目录或 `.gitkeep` 占位。
+7. `examples/`、`practice/`、`assets/` 放在对应课次目录，与课次 README 并列，按需创建；`labs/`、`homework/`、`projects/` 位于课程目录，按需创建。目录在实际开始写作时建立，不用空目录或 `.gitkeep` 占位。
 8. 依赖按课程管理，在课程目录内记录安装与运行方式。
 9. 学习进度只在课程 README 维护，可用 Module 进度表、课次状态表或两者；`syllabus.md`、`roadmap.md` 和课次笔记不重复记录。
 10. `resources.md` 用于集中记录官方主页、教材、工具链和本地素材；引用受版权保护的材料时优先链接官方来源并注明出处。
