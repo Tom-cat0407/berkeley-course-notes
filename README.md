@@ -4,6 +4,12 @@
 
 > 这是个人学习整理，不是 Berkeley 官方仓库或官方课程网站。课程名称、资料与版权归课程团队及原作者所有。
 
+## 为什么建立这个仓库
+
+[序：从使用 AI，到系统学习](docs/preface.md)
+
+记录我使用 AI 的经历、建立这个仓库的初衷，以及接下来系统学习大模型与 Agent 的方向。
+
 ## 当前课程
 
 [CS294-196 / CS194-196 · Agentic AI](courses/cs294-196/README.md) · Fall 2025
@@ -43,6 +49,7 @@ berkeley-course-notes/
 ├── README.md
 ├── .gitignore
 ├── docs/
+│   ├── preface.md
 │   └── writing-guide.md
 ├── templates/
 │   ├── course-readme.md
